@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { Demo } from '../data/content'
 
 type Props = {
@@ -5,8 +6,37 @@ type Props = {
 }
 
 export default function DemoCard({ demo }: Props) {
+  const shots = demo.gallery?.length
+    ? demo.gallery
+    : demo.image
+      ? [demo.image]
+      : []
+  const [active, setActive] = useState(0)
+  const preview = shots[active] ?? demo.image
+
   return (
     <article className="demo-card">
+      {preview && (
+        <div className="demo-card__media">
+          <img src={preview} alt={`${demo.title} preview`} loading="lazy" />
+          {shots.length > 1 && (
+            <div className="demo-card__thumbs" role="tablist" aria-label={`${demo.title} screenshots`}>
+              {shots.map((src, i) => (
+                <button
+                  key={src}
+                  type="button"
+                  className={i === active ? 'is-active' : ''}
+                  aria-label={`Screenshot ${i + 1}`}
+                  onClick={() => setActive(i)}
+                >
+                  <img src={src} alt="" />
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
       <span className="demo-card__cat">{demo.category}</span>
       <h3>{demo.title}</h3>
       <p>{demo.description}</p>

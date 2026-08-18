@@ -221,6 +221,8 @@ export type Demo = {
   login?: string
   password?: string
   tags: string[]
+  image?: string
+  gallery?: string[]
 }
 
 export const demos: Demo[] = [
@@ -249,11 +251,18 @@ export const demos: Demo[] = [
     title: 'Kisan Mall HR Panel',
     category: 'HR · Attendance',
     description:
-      'Staff management with live face-based attendance for real operations.',
+      'Staff management with live face-based attendance, shifts, payroll tools, and attendance settings.',
     url: 'https://kisanmall-hr.vercel.app/admin',
     login: '9999999999',
     password: 'admin123',
-    tags: ['HR', 'Attendance', 'Face Recognition'],
+    tags: ['HR', 'Attendance', 'Shifts', 'Face Recognition'],
+    image: '/demos/hr-dashboard.png',
+    gallery: [
+      '/demos/hr-dashboard.png',
+      '/demos/hr-attendance.png',
+      '/demos/hr-shifts.png',
+      '/demos/hr-settings.png',
+    ],
   },
   {
     id: 'stock-audit',
@@ -265,17 +274,25 @@ export const demos: Demo[] = [
     login: '9999999999',
     password: 'admin123',
     tags: ['Stock Audit', 'Inventory', 'Admin'],
+    image: '/demos/stock-audit.png',
   },
   {
     id: 'refurbicon',
-    title: 'Refurbicon Admin Panel',
-    category: 'Business · Admin',
+    title: 'Refurbicon Admin + Shop',
+    category: 'ERP · Ecommerce',
     description:
-      'Live admin panel demo for refurbished product operations — manage catalog, orders, and business workflow.',
+      'Full refurbished electronics platform — Enterprise ERP admin, inventory, and customer shop with live catalog.',
     url: 'https://refurbicon-bhilwara.vercel.app/login',
     login: 'admin@refurbicon.com',
     password: 'admin123',
-    tags: ['Admin Panel', 'Refurbish', 'Ecommerce'],
+    tags: ['Admin Panel', 'Inventory', 'Shop'],
+    image: '/demos/refurbicon-dashboard.png',
+    gallery: [
+      '/demos/refurbicon-dashboard.png',
+      '/demos/refurbicon-inventory.png',
+      '/demos/refurbicon-shop.png',
+      '/demos/refurbicon-laptops.png',
+    ],
   },
 ]
 

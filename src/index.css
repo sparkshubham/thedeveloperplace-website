@@ -218,18 +218,18 @@ img {
 }
 
 .brand__logo {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 3.35rem;
+  height: 3.35rem;
   border-radius: 50%;
   object-fit: cover;
   background: #000;
-  border: 1px solid rgba(56, 189, 248, 0.35);
+  border: 1px solid rgba(56, 189, 248, 0.45);
   flex-shrink: 0;
 }
 
 .brand__logo--lg {
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 4.25rem;
+  height: 4.25rem;
 }
 
 .brand__mark {
@@ -548,10 +548,57 @@ img {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  padding: 1.35rem;
+  padding: 1.15rem;
   border-radius: var(--radius);
   background: var(--surface);
   border: 1px solid var(--line);
+}
+
+.demo-card__media {
+  display: grid;
+  gap: 0.55rem;
+  margin: -0.15rem -0.15rem 0.15rem;
+}
+
+.demo-card__media > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  background: #0b1220;
+}
+
+.demo-card__thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+
+.demo-card__thumbs button {
+  padding: 0;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0b1220;
+  cursor: pointer;
+  opacity: 0.72;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.demo-card__thumbs button.is-active,
+.demo-card__thumbs button:hover {
+  opacity: 1;
+  border-color: var(--sky);
+}
+
+.demo-card__thumbs img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
 }
 
 .demo-card__cat {

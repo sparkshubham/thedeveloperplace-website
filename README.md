@@ -1,19 +1,23 @@
 # The Developer Place
 
-Company website for **The Developer Place** — custom admin panels, ecommerce, HR, and AI-powered business software.
+Company website for **The Developer Place** — Code. Create. Elevate.
 
-## Run locally
+## Features
+
+- Multi-page React site (Home, Products, Live Demos, Case Studies, Contact)
+- Black & blue design system (Poppins)
+- 10+ business solution modules
+- Live demos including Stock Audit, Ecommerce Admin/Customer, and HR
+
+## Run
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the URL shown in the terminal (usually `http://localhost:5173`).
-
 ## Build
 
 ```bash
 npm run build
-npm run preview
 ```

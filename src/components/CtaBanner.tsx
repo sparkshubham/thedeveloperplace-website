@@ -7,8 +7,8 @@ export default function CtaBanner() {
         <div>
           <h2>Ready to Transform Your Business?</h2>
           <p>
-            Book a free demo. We can prepare a UI/UX prototype first, then build
-            your complete Admin, Customer, Inventory, HR, and custom modules.
+            Book a free demo of ColdFlow or OMNIRETAIL. We can prepare a UI/UX
+            prototype first, then build your complete ERP and custom modules.
           </p>
         </div>
         <Link className="btn btn--white" to="/contact">

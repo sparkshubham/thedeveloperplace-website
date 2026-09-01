@@ -7,9 +7,61 @@ export type Product = {
   features: string[]
   steps: string[]
   color: string
+  flagship?: boolean
+  demoId?: string
 }
 
 export const products: Product[] = [
+  {
+    id: 'coldflow',
+    name: 'ColdFlow',
+    category: 'Operations',
+    flagship: true,
+    demoId: 'coldflow',
+    short:
+      'Complete cold storage ERP — chambers, inward/outward, rent billing, and GST.',
+    description:
+      'ColdFlow is a multi-tenant cold storage ERP for plant operations: chamber occupancy, lot-wise inward and outward, stock ledger, party masters, and storage rent billing with handling charges and GST. Built for warehouse, gate, and accounts teams with role-based access.',
+    features: [
+      'Chamber, rack, and location occupancy',
+      'Lot-wise inward, outward, and stock ledger',
+      'Storage rent, handling, and GST billing',
+      'Customers, suppliers, and commodity masters',
+      'Roles for warehouse, gate, and accounts',
+      'Multi-tenant SaaS with plans and audit logs',
+    ],
+    steps: [
+      'Set up chambers, racks, products, and party masters',
+      'Record inward lots and track occupancy in real time',
+      'Dispatch outwards and generate storage bills with GST',
+    ],
+    color: '#01BAEF',
+  },
+  {
+    id: 'omniretail',
+    name: 'OMNIRETAIL',
+    category: 'Business',
+    flagship: true,
+    demoId: 'omniretail',
+    short:
+      'Retail OS for clothing, saree, and fashion brands — inventory, orders, WhatsApp, and storefront.',
+    description:
+      'OMNIRETAIL is multi-tenant retail software for clothing, saree, and fashion brands. Each company gets isolated products, inventory, purchases, warehouses, orders, WhatsApp, marketplace sync, shipping, and a customer storefront — on one omnichannel platform.',
+    features: [
+      'Saree / garment catalog and variants',
+      'Warehouse inventory and purchases',
+      'Orders across store, WhatsApp, and marketplaces',
+      'Amazon / Flipkart and shipping integrations',
+      'Branded customer storefront per company',
+      'Staff, reports, and tenant-level isolation',
+    ],
+    steps: [
+      'Create the company tenant and load catalog + warehouses',
+      'Sell from storefront, WhatsApp, or marketplace channels',
+      'Fulfill orders, sync stock, and track reports in one panel',
+    ],
+    color: '#BE185D',
+  },
   {
     id: 'retail-erp',
     name: 'Retail / ERP',
@@ -34,6 +86,7 @@ export const products: Product[] = [
     id: 'stock-audit',
     name: 'Stock Audit',
     category: 'Operations',
+    demoId: 'stock-audit',
     short: 'Live stock audit panel for accurate inventory verification.',
     description:
       'Audit inventory with a dedicated admin panel — verify stock counts, track discrepancies, and keep warehouses aligned with real numbers.',
@@ -54,6 +107,7 @@ export const products: Product[] = [
     id: 'hr-management',
     name: 'HR Management',
     category: 'HR',
+    demoId: 'kisan-hr',
     short: 'Staff management with face-based attendance and workforce tools.',
     description:
       'Manage staff, attendance, and HR operations with live face recognition attendance and role-based admin access.',
@@ -74,6 +128,7 @@ export const products: Product[] = [
     id: 'ecommerce',
     name: 'Ecommerce Suite',
     category: 'Business',
+    demoId: 'kisan-admin',
     short: 'Admin + customer panels for full live ecommerce operations.',
     description:
       'Ship a complete ecommerce system with admin panel, customer panel, orders, products, and inventory connected end to end.',
@@ -220,12 +275,41 @@ export type Demo = {
   url: string
   login?: string
   password?: string
+  slug?: string
   tags: string[]
   image?: string
   gallery?: string[]
+  flagship?: boolean
 }
 
 export const demos: Demo[] = [
+  {
+    id: 'coldflow',
+    title: 'ColdFlow — Cold Storage ERP',
+    category: 'Flagship · Cold Storage',
+    flagship: true,
+    description:
+      'Full cold storage ERP: chambers and racks, inward/outward lots, occupancy, stock ledger, and GST-ready storage bills.',
+    url: 'https://cold-storage-five.vercel.app/login',
+    login: 'admin@abccold.test',
+    password: 'ChangeMe123!',
+    tags: ['Cold Storage', 'Inward / Outward', 'Billing', 'SaaS'],
+    image: '/demos/coldflow.svg',
+  },
+  {
+    id: 'omniretail',
+    title: 'OMNIRETAIL — Fashion Retail',
+    category: 'Flagship · Clothing & Saree',
+    flagship: true,
+    description:
+      'Omnichannel retail for clothing and saree brands — catalog, inventory, orders, WhatsApp, marketplaces, and a live customer store.',
+    url: 'https://omniretail-saree-frontend.vercel.app/login',
+    login: 'admin@ganpati.local',
+    password: 'Ganpati@12345',
+    slug: 'ganpati',
+    tags: ['Saree / Fashion', 'Inventory', 'WhatsApp', 'Storefront'],
+    image: '/demos/omniretail.svg',
+  },
   {
     id: 'kisan-admin',
     title: 'Kisan Mall Admin Panel',
@@ -303,9 +387,39 @@ export type CaseStudy = {
   result: string
   summary: string
   productIds: string[]
+  demoId?: string
+}
+
+export const flagshipProducts = products.filter((p) => p.flagship)
+export const catalogProducts = products.filter((p) => !p.flagship)
+export const flagshipDemos = demos.filter((d) => d.flagship)
+
+export function getDemo(id?: string) {
+  if (!id) return undefined
+  return demos.find((d) => d.id === id)
 }
 
 export const caseStudies: CaseStudy[] = [
+  {
+    id: 'coldflow',
+    title: 'ColdFlow',
+    industry: 'Cold Storage',
+    result: 'Live SaaS ERP',
+    summary:
+      'Complete cold storage management — chamber occupancy, lot-wise inward/outward, stock ledger, and rent billing with GST. Open the live demo today.',
+    productIds: ['coldflow'],
+    demoId: 'coldflow',
+  },
+  {
+    id: 'omniretail',
+    title: 'OMNIRETAIL',
+    industry: 'Clothing · Saree · Fashion',
+    result: 'Omnichannel retail OS',
+    summary:
+      'Retail software for saree and fashion brands: isolated company tenants, inventory, orders, WhatsApp, marketplaces, and a branded storefront.',
+    productIds: ['omniretail'],
+    demoId: 'omniretail',
+  },
   {
     id: 'kisan-mall',
     title: 'Kisan Mall',

@@ -1,13 +1,18 @@
 import { Link } from 'react-router-dom'
-import { demos, products } from '../data/content'
+import {
+  catalogProducts,
+  flagshipDemos,
+  flagshipProducts,
+} from '../data/content'
 import ProductCard from '../components/ProductCard'
 import DemoCard from '../components/DemoCard'
+import FlagshipCard from '../components/FlagshipCard'
 import CtaBanner from '../components/CtaBanner'
 
 const stats = [
+  { value: '2', label: 'Flagship Products' },
   { value: '10+', label: 'Business Solutions' },
   { value: '150+', label: 'Projects Delivered' },
-  { value: '100+', label: 'Happy Clients' },
   { value: '24/7', label: 'Support' },
 ]
 
@@ -17,8 +22,8 @@ const why = [
     text: 'Developers who ship production panels, APIs, and workflows — not just mockups.',
   },
   {
-    title: 'Custom Solutions',
-    text: 'Every module is tailored to your business: ecommerce, HR, stock audit, and more.',
+    title: 'Industry ERPs',
+    text: 'Flagship systems for cold storage and fashion retail, plus modules you can mix in.',
   },
   {
     title: 'Latest Technology',
@@ -31,7 +36,7 @@ const why = [
 ]
 
 export default function Home() {
-  const featured = products.slice(0, 8)
+  const featured = catalogProducts.slice(0, 8)
 
   return (
     <>
@@ -40,13 +45,11 @@ export default function Home() {
         <div className="container hero__grid">
           <div className="hero__copy">
             <p className="eyebrow">Code. Create. Elevate.</p>
-            <h1>
-              We Build Digital Solutions That Drive Your Business Forward.
-            </h1>
+            <h1>Industry software that runs the business — not just a website.</h1>
             <p className="hero__lead">
-              Custom admin panels, ecommerce systems, HR platforms, stock audit
-              tools, and industry software — designed, developed, and delivered
-              for real operations.
+              Flagship products: <strong>ColdFlow</strong> for cold storage ERP
+              and <strong>OMNIRETAIL</strong> for clothing, saree, and fashion
+              brands. Plus custom admin panels, HR, stock audit, and more.
             </p>
             <div className="hero__actions">
               <Link className="btn btn--primary" to="/contact">
@@ -81,12 +84,12 @@ export default function Home() {
                 </div>
                 <div className="dash__cards">
                   <div>
-                    <small>Revenue</small>
-                    <b>₹2.4L</b>
+                    <small>ColdFlow</small>
+                    <b>76% occ.</b>
                   </div>
                   <div>
-                    <small>Orders</small>
-                    <b>1,284</b>
+                    <small>OMNIRETAIL</small>
+                    <b>₹9.2L</b>
                   </div>
                 </div>
                 <div className="dash__chart">
@@ -103,14 +106,32 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="container">
+          <div className="section__head center">
+            <p className="eyebrow">Flagship products</p>
+            <h2>ColdFlow and OMNIRETAIL</h2>
+            <p>
+              Our two strongest live systems — a cold storage ERP and a fashion
+              retail OS you can open and try today.
+            </p>
+          </div>
+          <div className="flagship-grid">
+            {flagshipProducts.map((product) => (
+              <FlagshipCard key={product.id} product={product} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section section--light">
         <div className="container">
           <div className="section__head center">
-            <p className="eyebrow dark">Solutions</p>
-            <h2>10+ Business Solutions for Every Industry</h2>
+            <p className="eyebrow dark">Also available</p>
+            <h2>More business solutions</h2>
             <p>
-              From retail ERP and stock audit to HR, ecommerce, schools, and gyms
-              — pick a module or get a fully customized system.
+              Ecommerce, HR, stock audit, schools, gyms, and more — pick a
+              module or get a fully customized system around the flagship ERPs.
             </p>
           </div>
           <div className="product-grid">
@@ -130,17 +151,21 @@ export default function Home() {
         <div className="container">
           <div className="section__head">
             <p className="eyebrow">Live demos</p>
-            <h2>Try full-featured panels we have shipped</h2>
+            <h2>Try ColdFlow and OMNIRETAIL now</h2>
             <p>
-              Explore working ecommerce, HR, and stock audit systems. Need the
-              same for your business? We customize Admin, Customer, Inventory,
-              Attendance, and more.
+              Sign in to the flagship panels. More ecommerce, HR, and stock
+              audit demos are on the Live Demos page.
             </p>
           </div>
           <div className="demo-grid">
-            {demos.map((demo) => (
+            {flagshipDemos.map((demo) => (
               <DemoCard key={demo.id} demo={demo} />
             ))}
+          </div>
+          <div className="center-actions">
+            <Link className="btn btn--secondary" to="/demos">
+              View all live demos →
+            </Link>
           </div>
         </div>
       </section>

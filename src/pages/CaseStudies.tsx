@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { caseStudies, demos } from '../data/content'
+import { caseStudies, demos, getDemo } from '../data/content'
 import CtaBanner from '../components/CtaBanner'
 
 export default function CaseStudies() {
@@ -8,9 +8,9 @@ export default function CaseStudies() {
       <section className="page-hero">
         <div className="container">
           <p className="eyebrow">Case studies</p>
-          <h1>Success stories from live projects</h1>
+          <h1>Flagship products and live projects</h1>
           <p>
-            Real systems we built and shipped — including ecommerce, HR
+            ColdFlow and OMNIRETAIL lead the portfolio, alongside ecommerce, HR
             attendance, and stock audit panels you can try today.
           </p>
         </div>
@@ -25,9 +25,25 @@ export default function CaseStudies() {
               <p>{item.summary}</p>
               <strong className="case-card__result">{item.result}</strong>
               <div className="case-card__actions">
-                <Link className="btn btn--primary btn--sm" to="/demos">
-                  View related demos
-                </Link>
+                {item.demoId ? (
+                  <a
+                    className="btn btn--primary btn--sm"
+                    href={getDemo(item.demoId)?.url ?? '/demos'}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open live demo
+                  </a>
+                ) : (
+                  <Link className="btn btn--primary btn--sm" to="/demos">
+                    View related demos
+                  </Link>
+                )}
+                {item.productIds[0] && (
+                  <Link className="btn btn--secondary btn--sm" to={`/products/${item.productIds[0]}`}>
+                    Learn more
+                  </Link>
+                )}
               </div>
             </article>
           ))}

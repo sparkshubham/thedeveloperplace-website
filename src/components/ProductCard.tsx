@@ -18,6 +18,7 @@ export default function ProductCard({ product, light }: Props) {
           <path d="M8 9h8M8 12h5M8 15h7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
         </svg>
       </span>
+      {product.flagship && <span className="product-card__badge">Flagship</span>}
       <h3>{product.name}</h3>
       <p>{product.short}</p>
       <span className="text-link">Learn more →</span>

@@ -21,10 +21,10 @@ export default function Products() {
       <section className="page-hero">
         <div className="container">
           <p className="eyebrow">Products</p>
-          <h1>Business solutions for every industry</h1>
+          <h1>Flagship ERPs and industry modules</h1>
           <p>
-            Explore our ready modules — or ask us to customize a complete system
-            with Admin Panel, Customer Panel, APIs, and database.
+            Start with ColdFlow (cold storage) and OMNIRETAIL (clothing, saree,
+            fashion) — then add ecommerce, HR, stock audit, and other modules.
           </p>
         </div>
       </section>

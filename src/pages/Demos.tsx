@@ -8,10 +8,11 @@ export default function Demos() {
       <section className="page-hero">
         <div className="container">
           <p className="eyebrow">Live demos</p>
-          <h1>Full flash demos for ecommerce, HR & stock audit</h1>
+          <h1>Open ColdFlow, OMNIRETAIL, and more live panels</h1>
           <p>
-            Try complete panels we provide — Admin, Customer, HR attendance, and
-            Stock Audit. We can customize the same stack for your business.
+            Try the flagship ERPs first — cold storage and fashion retail — plus
+            ecommerce, HR attendance, and stock audit. We customize the same
+            stack for your business.
           </p>
         </div>
       </section>
@@ -28,10 +29,10 @@ export default function Demos() {
             <h3>Need a similar customized panel?</h3>
             <p>
               We can develop the complete system according to your requirements —
-              including Admin Panel, Customer Panel, Product Management, Orders,
-              Inventory, Stock Audit, HR Management, Attendance, and other
-              modules. We can prepare a UI/UX prototype first for approval, then
-              start development.
+              ColdFlow for cold storage, OMNIRETAIL for clothing and saree
+              brands, plus Admin Panel, Customer Panel, Inventory, Stock Audit,
+              HR, and other modules. We can prepare a UI/UX prototype first for
+              approval, then start development.
             </p>
           </aside>
         </div>

@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { demos, products } from '../data/content'
+import { getDemo, products } from '../data/content'
 import CtaBanner from '../components/CtaBanner'
 
 export default function ProductDetail() {
@@ -19,21 +19,17 @@ export default function ProductDetail() {
     )
   }
 
-  const relatedDemo =
-    product.id === 'stock-audit'
-      ? demos.find((d) => d.id === 'stock-audit')
-      : product.id === 'hr-management'
-        ? demos.find((d) => d.id === 'kisan-hr')
-        : product.id === 'ecommerce'
-          ? demos.find((d) => d.id === 'kisan-admin')
-          : undefined
+  const relatedDemo = getDemo(product.demoId)
 
   return (
     <>
       <section className="page-hero">
         <div className="container detail-hero">
           <div>
-            <p className="eyebrow">{product.category}</p>
+            <p className="eyebrow">
+              {product.flagship ? 'Flagship · ' : ''}
+              {product.category}
+            </p>
             <h1>{product.name}</h1>
             <p>{product.description}</p>
             <div className="hero__actions">
@@ -51,6 +47,28 @@ export default function ProductDetail() {
                 </a>
               )}
             </div>
+            {relatedDemo && (relatedDemo.login || relatedDemo.password || relatedDemo.slug) && (
+              <div className="creds creds--hero">
+                {relatedDemo.slug && (
+                  <p>
+                    <span>Slug</span>
+                    <code>{relatedDemo.slug}</code>
+                  </p>
+                )}
+                {relatedDemo.login && (
+                  <p>
+                    <span>Login</span>
+                    <code>{relatedDemo.login}</code>
+                  </p>
+                )}
+                {relatedDemo.password && (
+                  <p>
+                    <span>Password</span>
+                    <code>{relatedDemo.password}</code>
+                  </p>
+                )}
+              </div>
+            )}
           </div>
           <div className="detail-panel" aria-hidden>
             <div className="detail-panel__bar">

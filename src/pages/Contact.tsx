@@ -15,8 +15,9 @@ export default function Contact() {
           <p className="eyebrow">Contact</p>
           <h1>Book a free demo</h1>
           <p>
-            Tell us what you need — ecommerce, HR, stock audit, or a full
-            multi-module platform. We’ll respond with next steps.
+            Tell us what you need — ColdFlow, OMNIRETAIL, ecommerce, HR, stock
+            audit, or a full multi-module platform. We’ll respond with next
+            steps.
           </p>
         </div>
       </section>
@@ -49,7 +50,9 @@ export default function Contact() {
                 </label>
                 <label>
                   Interested in
-                  <select name="interest" defaultValue="stock-audit">
+                  <select name="interest" defaultValue="coldflow">
+                    <option value="coldflow">ColdFlow — Cold Storage ERP</option>
+                    <option value="omniretail">OMNIRETAIL — Fashion / Saree</option>
                     <option value="ecommerce">Ecommerce / Admin panel</option>
                     <option value="stock-audit">Stock Audit</option>
                     <option value="hr">HR / Attendance</option>

@@ -17,15 +17,18 @@ export default function Footer() {
             </span>
           </div>
           <p className="footer__about">
-            We build custom digital solutions — admin panels, ecommerce, HR,
-            stock audit, and industry software that drives business forward.
+            We build industry ERPs — ColdFlow for cold storage and OMNIRETAIL
+            for clothing, saree, and fashion brands — plus admin panels, HR, and
+            stock audit.
           </p>
         </div>
 
         <div>
           <h4>Explore</h4>
           <div className="footer__links">
-            <Link to="/products">Products</Link>
+            <Link to="/products/coldflow">ColdFlow</Link>
+            <Link to="/products/omniretail">OMNIRETAIL</Link>
+            <Link to="/products">All products</Link>
             <Link to="/demos">Live Demos</Link>
             <Link to="/case-studies">Case Studies</Link>
             <Link to="/contact">Contact</Link>

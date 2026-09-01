@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect width="200" height="540" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="28" y="48" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">OMNIRETAIL</text>
+  <text x="28" y="68" fill="#64748B" font-family="Segoe UI, Arial, sans-serif" font-size="11">Ganpati Sarees</text>
+  <rect x="20" y="96" width="160" height="36" rx="8" fill="#EFF6FF"/>
+  <text x="36" y="118" fill="#1D4ED8" font-family="Segoe UI, Arial, sans-serif" font-size="13">Dashboard</text>
+  <text x="36" y="162" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="13">Products</text>
+  <text x="36" y="198" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="13">Inventory</text>
+  <text x="36" y="234" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="13">Orders</text>
+  <text x="36" y="270" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="13">WhatsApp</text>
+  <rect x="228" y="36" width="210" height="92" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="248" y="68" fill="#64748B" font-family="Segoe UI, Arial, sans-serif" font-size="12">Today's orders</text>
+  <text x="248" y="102" fill="#BE185D" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">128</text>
+  <rect x="458" y="36" width="210" height="92" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="478" y="68" fill="#64748B" font-family="Segoe UI, Arial, sans-serif" font-size="12">SKU in stock</text>
+  <text x="478" y="102" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">2,460</text>
+  <rect x="688" y="36" width="236" height="92" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="708" y="68" fill="#64748B" font-family="Segoe UI, Arial, sans-serif" font-size="12">Store sales</text>
+  <text x="708" y="102" fill="#059669" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">¹9.2L</text>
+  <rect x="228" y="152" width="430" height="348" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="252" y="188" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Saree catalog</text>
+  <rect x="252" y="214" width="176" height="120" rx="10" fill="#FCE7F3"/>
+  <rect x="444" y="214" width="176" height="120" rx="10" fill="#EDE9FE"/>
+  <rect x="252" y="350" width="176" height="120" rx="10" fill="#DBEAFE"/>
+  <rect x="444" y="350" width="176" height="120" rx="10" fill="#FFEDD5"/>
+  <rect x="678" y="152" width="246" height="348" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="698" y="188" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Omnichannel</text>
+  <rect x="698" y="214" width="206" height="54" rx="10" fill="#FDF2F8"/>
+  <text x="718" y="246" fill="#BE185D" font-family="Segoe UI, Arial, sans-serif" font-size="13">WhatsApp orders</text>
+  <rect x="698" y="282" width="206" height="54" rx="10" fill="#EEF2FF"/>
+  <text x="718" y="314" fill="#4338CA" font-family="Segoe UI, Arial, sans-serif" font-size="13">Amazon / Flipkart</text>
+  <rect x="698" y="350" width="206" height="54" rx="10" fill="#ECFDF5"/>
+  <text x="718" y="382" fill="#047857" font-family="Segoe UI, Arial, sans-serif" font-size="13">Own storefront</text>
+  <rect x="698" y="418" width="206" height="54" rx="10" fill="#FFF7ED"/>
+  <text x="718" y="450" fill="#C2410C" font-family="Segoe UI, Arial, sans-serif" font-size="13">Shipping</text>
+</svg>

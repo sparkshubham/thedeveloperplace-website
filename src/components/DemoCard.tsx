@@ -15,7 +15,7 @@ export default function DemoCard({ demo }: Props) {
   const preview = shots[active] ?? demo.image
 
   return (
-    <article className="demo-card">
+    <article className={`demo-card ${demo.flagship ? 'demo-card--flagship' : ''}`}>
       {preview && (
         <div className="demo-card__media">
           <img src={preview} alt={`${demo.title} preview`} loading="lazy" />
@@ -45,8 +45,14 @@ export default function DemoCard({ demo }: Props) {
           <li key={tag}>{tag}</li>
         ))}
       </ul>
-      {(demo.login || demo.password) && (
+      {(demo.login || demo.password || demo.slug) && (
         <div className="creds">
+          {demo.slug && (
+            <p>
+              <span>Slug</span>
+              <code>{demo.slug}</code>
+            </p>
+          )}
           {demo.login && (
             <p>
               <span>Login</span>

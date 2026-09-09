@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Mail, MessageCircle } from 'lucide-react'
+import { Mail, MessageCircle, Phone } from 'lucide-react'
 import { Section } from '@/components/ui/Section'
 import { Button } from '@/components/ui/Button'
 import { Field, Input, Select, Textarea } from '@/components/ui/Input'
@@ -147,6 +147,13 @@ export function ContactSection() {
             </p>
             <div className="mt-5 flex flex-col gap-3">
               <Button
+                href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
+                variant="secondary"
+                className="justify-start"
+              >
+                <Phone className="h-4 w-4" /> {siteConfig.phone}
+              </Button>
+              <Button
                 href={`https://wa.me/${siteConfig.whatsapp}`}
                 variant="secondary"
                 className="justify-start"
@@ -160,7 +167,10 @@ export function ContactSection() {
           </div>
           <div className="glass rounded-2xl p-6 text-sm text-slate-400">
             <p>
-              <span className="font-semibold text-slate-200">Phone:</span> {siteConfig.phone}
+              <span className="font-semibold text-slate-200">Phone:</span>{' '}
+              <a href={`tel:${siteConfig.phone.replace(/\s/g, '')}`} className="hover:text-cyan-soft">
+                {siteConfig.phone}
+              </a>
             </p>
             <p className="mt-2">
               <span className="font-semibold text-slate-200">Hours:</span> Mon – Sat · 10:00 AM – 7:00 PM IST

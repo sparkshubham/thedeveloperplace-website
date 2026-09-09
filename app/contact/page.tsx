@@ -23,8 +23,11 @@ export default function ContactPage() {
         <MagneticButton href="#contact" size="lg">
           Jump to the form
         </MagneticButton>
-        <Button href={`https://wa.me/${siteConfig.whatsapp}`} variant="secondary" size="lg">
-          WhatsApp
+        <Button href={`tel:${siteConfig.phone.replace(/\s/g, '')}`} variant="secondary" size="lg">
+          Call {siteConfig.phone}
+        </Button>
+        <Button href={`mailto:${siteConfig.email}`} variant="outline" size="lg">
+          Email
         </Button>
       </PageHero>
       <ContactSection />

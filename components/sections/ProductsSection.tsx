@@ -20,7 +20,10 @@ export function ProductsSection() {
       <div className="grid gap-6 lg:grid-cols-3">
         {products.map((product, i) => (
           <Reveal key={product.id} delay={i * 0.06}>
-            <article className="glass group flex h-full flex-col overflow-hidden rounded-2xl transition hover:border-electric/40 hover:shadow-glow">
+            <article
+                id={product.id}
+                className="glass group flex h-full flex-col overflow-hidden rounded-2xl transition hover:border-electric/40 hover:shadow-glow"
+              >
               <div
                 className="relative h-44 overflow-hidden border-b border-white/10"
                 style={{
@@ -70,7 +73,7 @@ export function ProductsSection() {
                   <Button href={product.demoUrl} size="sm" className="flex-1">
                     View Demo
                   </Button>
-                  <Button href="#contact" variant="secondary" size="sm" className="flex-1">
+                  <Button href="/contact" variant="secondary" size="sm" className="flex-1">
                     Request Consultation
                   </Button>
                 </div>

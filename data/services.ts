@@ -7,7 +7,7 @@ export const services: Service[] = [
     description:
       'Purpose-built systems tailored to your workflows, teams, and growth plans — not one-size-fits-all templates.',
     icon: 'Code2',
-    href: '#contact',
+    href: '/contact',
   },
   {
     id: 'saas',
@@ -15,7 +15,7 @@ export const services: Service[] = [
     description:
       'Multi-tenant platforms with subscriptions, RBAC, billing hooks, and infrastructure ready to scale.',
     icon: 'Cloud',
-    href: '#contact',
+    href: '/contact',
   },
   {
     id: 'web-apps',
@@ -23,7 +23,7 @@ export const services: Service[] = [
     description:
       'Fast, secure web apps with modern React/Next.js frontends and robust APIs your business can rely on.',
     icon: 'Globe',
-    href: '#contact',
+    href: '/contact',
   },
   {
     id: 'mobile',
@@ -31,7 +31,7 @@ export const services: Service[] = [
     description:
       'Native-feeling mobile experiences that connect customers and field teams to your core systems.',
     icon: 'Smartphone',
-    href: '#contact',
+    href: '/contact',
   },
   {
     id: 'erp-crm',
@@ -39,7 +39,7 @@ export const services: Service[] = [
     description:
       'Industry ERPs and CRM workflows that unify inventory, sales, finance, and customer operations.',
     icon: 'Boxes',
-    href: '#contact',
+    href: '/contact',
   },
   {
     id: 'ecommerce',
@@ -47,7 +47,7 @@ export const services: Service[] = [
     description:
       'Storefronts, admin panels, and marketplace-ready commerce stacks built for real order volume.',
     icon: 'ShoppingBag',
-    href: '#contact',
+    href: '/contact',
   },
   {
     id: 'ai-whatsapp',
@@ -55,7 +55,7 @@ export const services: Service[] = [
     description:
       'Intelligent assistants, sales bots, and automated workflows that respond, qualify, and convert.',
     icon: 'Bot',
-    href: '#contact',
+    href: '/contact',
   },
   {
     id: 'integrations',
@@ -63,7 +63,7 @@ export const services: Service[] = [
     description:
       'Reliable connectors for payments, logistics, marketplaces, CRMs, and the tools you already use.',
     icon: 'Plug',
-    href: '#contact',
+    href: '/contact',
   },
   {
     id: 'cloud',
@@ -71,6 +71,6 @@ export const services: Service[] = [
     description:
       'Production deployments, monitoring, backups, and ongoing care so your software stays fast and secure.',
     icon: 'Server',
-    href: '#contact',
+    href: '/contact',
   },
 ]

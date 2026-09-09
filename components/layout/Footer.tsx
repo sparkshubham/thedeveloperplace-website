@@ -47,9 +47,9 @@ export function Footer() {
           <ul className="space-y-2 text-sm text-slate-400">
             {services.slice(0, 6).map((s) => (
               <li key={s.id}>
-                <a href="#services" className="hover:text-cyan-soft">
+                <Link href="/services" className="hover:text-cyan-soft">
                   {s.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -60,9 +60,9 @@ export function Footer() {
           <ul className="space-y-2 text-sm text-slate-400">
             {products.map((p) => (
               <li key={p.id}>
-                <a href="#products" className="hover:text-cyan-soft">
+                <Link href={`/products#${p.id}`} className="hover:text-cyan-soft">
                   {p.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -72,9 +72,9 @@ export function Footer() {
           <ul className="space-y-2 text-sm text-slate-400">
             {navLinks.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="hover:text-cyan-soft">
+                <Link href={l.href} className="hover:text-cyan-soft">
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

@@ -35,10 +35,10 @@ export function HeroSection() {
               applications, we turn complex ideas into scalable digital products.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <MagneticButton href="#contact" size="lg">
+              <MagneticButton href="/contact" size="lg">
                 Start Your Project
               </MagneticButton>
-              <Button href="#products" variant="secondary" size="lg">
+              <Button href="/products" variant="secondary" size="lg">
                 Explore Our Products
               </Button>
             </div>

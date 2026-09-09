@@ -52,7 +52,7 @@ export const products: Product[] = [
       'Pluggable provider adapters',
     ],
     tech: ['Node.js', 'Express', 'MongoDB', 'Redis', 'BullMQ'],
-    demoUrl: '#contact',
+    demoUrl: '/contact',
     color: '#8B5CF6',
     flagship: false,
   },

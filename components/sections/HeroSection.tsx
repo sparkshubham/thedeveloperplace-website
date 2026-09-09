@@ -60,7 +60,7 @@ export function HeroSection() {
         <Reveal delay={0.1}>
           <HeroScene />
           <div className="mt-4 grid grid-cols-3 gap-3">
-            {['Connected Systems', 'Live Data Nodes', 'AI-Ready Stack'].map((label) => (
+            {['Global Systems', 'Live Data Routes', 'Always On'].map((label) => (
               <div
                 key={label}
                 className="glass rounded-xl px-3 py-3 text-center text-xs font-medium text-slate-300"
